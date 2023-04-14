@@ -51,32 +51,44 @@
 123456 -> no
 """
 
-s = int(input("Enter number: "))
+# s = int(input("Enter number: "))
 
-a = int(s / 1000)
-b = s % 1000
+# a = int(s / 1000)
+# b = s % 1000
 
-sum1 = 0
-sum2 = 0
+# sum1 = 0
+# sum2 = 0
 
-while a > 0:
-    sum1 += a % 10
-    a //=  10
+# while a > 0:
+#     sum1 += a % 10
+#     a //=  10
 
-while b > 0:
-    sum2 += b % 10
-    b //=  10
+# while b > 0:
+#     sum2 += b % 10
+#     b //=  10
 
-if sum1 == sum2:
-    print("Yes")
-else:
-    print("NO")
-    
+# if sum1 == sum2:
+#     print("Yes")
+# else:
+#     print("NO")
+
 """
-Задача 8: Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, если разрешается сделать один разлом по прямой между дольками (то есть разломить шоколадку на два прямоугольника).
+Задача 8: Требуется определить, можно ли от шоколадки размером n × m долек отломить k долек, если разрешается сделать один разлом по прямой между дольками
+(то есть разломить шоколадку на два прямоугольника).
 
 *Пример:*
 
 3 2 4 -> yes
 3 2 1 -> no
 """
+
+m = int(input("Enter Chocolat line: "))
+n = int(input("Enter Chocolat colons: "))
+k = int(input("Enter pices: "))
+
+if k >= m*n:
+    print("no")
+elif int(k % m) == 0 or int(k % n) == 0:
+    print("yes")
+else:
+    print("no")
